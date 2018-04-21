@@ -1,0 +1,272 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.waypoints1.Activities.HomeActivity">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="50dp"
+           android:layout_weight="1.9"
+           android:id="@+id/layoutone"
+           android:visibility="gone"
+           android:orientation="horizontal">
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+
+               <Button
+                   android:id="@+id/back_bution_search"
+                   android:layout_width="32dp"
+                   android:layout_height="32dp"
+                   android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                   android:layout_alignParentStart="true"
+                   android:layout_alignParentTop="true"
+                   android:background="@drawable/back_arrow_search" />
+
+               <EditText
+                   android:layout_toRightOf="@+id/back_bution_search"
+                   android:id="@+id/editText"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight=".5"
+                   android:imeOptions="actionSearch"
+                   android:singleLine="true"
+                   android:paddingLeft="3dp"
+                   android:drawablePadding="5dp"
+                   android:clickable="true"
+                   android:background="@drawable/search_edit_text"
+                   android:layout_toLeftOf="@+id/search_button"
+                   android:hint="Search Location Here" />
+
+
+               <Button
+                   android:layout_alignParentRight="true"
+                   android:id="@+id/search_button"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginTop="10dp"
+                   android:layout_width="32dp"
+                   android:layout_height="32dp"
+                   android:layout_weight="1.5"
+                   android:clickable="true"
+                   android:background="@drawable/search_bt"
+                   />
+
+
+
+           </RelativeLayout>
+
+       </LinearLayout>
+
+       <LinearLayout
+           android:id="@+id/layout_search"
+           android:layout_below="@+id/layoutone"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:visibility="gone">
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/searchfileter_recycle_view"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+
+           </android.support.v7.widget.RecyclerView>
+
+
+       </LinearLayout>
+<LinearLayout
+    android:visibility="visible"
+    android:id="@+id/Map_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+
+        android:id="@+id/mapView"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutone"
+
+        />
+</LinearLayout>
+
+
+   <Button
+       android:id="@+id/startButton"
+       android:layout_height="35dp"
+       android:layout_width="150dp"
+       android:layout_alignParentBottom="true"
+       android:layout_alignParentRight="true"
+       android:layout_marginBottom="20dp"
+       android:layout_marginRight="20dp"
+       android:visibility="gone"
+       android:text="PROCEED"
+       android:textSize="15dp"
+       android:textStyle="normal"
+       android:textColor="@color/white"
+       android:background="@drawable/getdirection_butinon"
+       />
+
+   <Button
+       android:id="@+id/back_buttion_map"
+       android:layout_width="150dp"
+       android:layout_height="35dp"
+       android:layout_marginBottom="20dp"
+       android:visibility="gone"
+       android:background="@drawable/getdirection_butinon"
+       android:layout_marginLeft="20dp"
+       android:text="BACK"
+       android:textColor="@color/white"
+       android:textStyle="normal"
+       android:layout_alignParentBottom="true"
+       />
+
+   <Button
+       android:id="@+id/getdirection_BT"
+       android:layout_width="150dp"
+       android:layout_centerInParent="true"
+       android:layout_height="35dp"
+       android:layout_alignParentBottom="true"
+       android:layout_marginBottom="20dp"
+       android:text="GET DIRECTION"
+       android:textStyle="normal"
+       android:textSize="15dp"
+       android:visibility="gone"
+       android:background="@drawable/getdirection_butinon"
+       android:textColor="@color/white"
+       />
+       <Button
+           android:id="@+id/goTo_BT"
+           android:layout_width="60dp"
+           android:layout_centerInParent="true"
+           android:layout_height="60dp"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="20dp"
+           android:text="GO To"
+           android:textStyle="normal"
+           android:textSize="15dp"
+           android:visibility="gone"
+           android:background="@drawable/go_bution_circuler"
+           android:textColor="@color/white"
+           />
+
+       <Button
+           android:id="@+id/End_Trip_BT"
+           android:layout_width="135dp"
+           android:layout_centerInParent="true"
+           android:layout_height="35dp"
+           android:layout_alignParentBottom="true"
+           android:layout_marginBottom="20dp"
+           android:text="End Trip"
+           android:textStyle="normal"
+           android:textSize="15dp"
+           android:visibility="gone"
+           android:background="@drawable/getdirection_butinon"
+           android:textColor="@color/white"
+           />
+
+
+       <Button
+           android:id="@+id/whare_to"
+            android:layout_marginTop="10dp"
+           android:layout_width="150dp"
+           android:layout_height="35dp"
+           android:text="WHERE TO?"
+           android:textColor="@color/white"
+           android:textSize="15dp"
+           android:visibility="gone"
+           android:textStyle="italic"
+           android:layout_centerHorizontal="true"
+           android:background="@drawable/getdirection_butinon"
+           />
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+    <!--<fragment-->
+        <!--android:id="@+id/map"-->
+        <!--android:name="com.google.android.gms.maps.SupportMapFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:padding="15dp"
+            android:drawableLeft="@drawable/ic_up"
+            android:gravity="center_vertical"
+            android:drawablePadding="10dp"
+            android:textSize="18sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_location"
+            android:padding="15dp"
+            android:drawablePadding="10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Location"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_destination"
+            android:padding="15dp"
+            android:drawablePadding="10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Destination(Optional)"/>
+
+    </LinearLayout>
+
+
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="visible"
+        android:src="@drawable/ic_search"
+        fab:fab_colorNormal="@color/colorPrimary"/>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/recenter_icon"
+        android:layout_height="5dp"
+        android:layout_width="2dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="15dp"
+        fab:fab_colorNormal="@android:color/transparent"
+        android:src="@drawable/recenter_icon"
+        fab:fab_colorPressed="@android:color/transparent"
+        fab:fab_colorRipple="@android:color/transparent"
+        />
+
+
+</FrameLayout>

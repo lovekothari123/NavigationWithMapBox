@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/infowindoe_background"
+    >
+
+    <TextView
+        android:id="@+id/tv_lat_INFO"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:text="SmartStop"
+        android:layout_marginRight="10dp"
+        android:lines="1"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_marginLeft="13dp"
+        android:layout_below="@+id/tv_lat_INFO"
+        android:id="@+id/tv_lng_INFO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:text="S01"
+        android:ellipsize="marquee"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/white"/>
+</RelativeLayout>

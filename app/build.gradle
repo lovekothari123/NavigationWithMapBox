@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.demosmartstop"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0.0"
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //TODO OTHEWR ACTIVITYS
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.google.android.gms:play-services-location:11.0.4'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.google.android.gms:play-services-ads:11.0.4'
+
+    compile 'com.github.whinc:ratingbar:1.1.1'
+    compile 'com.github.clans:fab:1.6.4'
+
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //TODO RECYCLE VIEW
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+
+    //TODO picaso for download image into device
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    //TODO PopUu Window ToolPit
+    compile 'com.fenchtose:tooltip:0.1.5'
+
+    //Retrofit
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //TODO MAPBOX LIB
+
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-navigation:0.9.0'
+    implementation('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.9.0') {
+        transitive = true
+    }
+
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:5.3.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation('com.mapbox.mapboxsdk:mapbox-android-sdk:5.3.2@aar') {
+        transitive = true
+
+    }
+
+    //TODO MAultidex LIB
+    compile 'com.android.support:multidex:1.0.2'
+
+}

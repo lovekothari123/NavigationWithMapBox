@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_layer"
+        android:alpha="0.9"/>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/cust_edit">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RATE US"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:textColor="@color/colorPrimary"
+        />
+
+
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+            android:visibility="visible"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rate Our App If you Like our app,Please Take a Moment to rate it"
+        android:textSize="14sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"/>
+
+
+        <EditText
+            android:id="@+id/rating_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Name :-"
+            android:textStyle="normal"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:lines="1"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:imeOptions="actionNext"
+            />
+        <EditText
+            android:id="@+id/rating_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:hint="Enter your Email :-"
+            android:textStyle="normal"
+            android:lines="1"
+
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:imeOptions="actionNext"
+            />
+        <EditText
+            android:id="@+id/rating_phone_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Phone No :-(optional)"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:lines="1"
+            android:textStyle="normal"
+            android:imeOptions="actionNext"
+            />
+
+        <EditText
+            android:id="@+id/rating_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:hint="Feedback:-(optional)"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/black"
+
+            />
+
+
+
+        <com.whinc.widget.ratingbar.RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            app:rb_max_count="5"
+            app:rb_empty="@drawable/ic_star_unfilled"
+            app:rb_fill="@drawable/ic_star_filled"
+            android:layout_gravity="center_horizontal"
+            app:rb_space="5dp"
+            android:layout_margin="5dp"
+            app:rb_click_rating="true"
+            app:rb_touch_rating="true"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_margin="5dp"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_back"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Submit"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15dp"/>
+            <Button
+                android:id="@+id/rating_btn_later"
+                android:layout_margin="5dp"
+
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_back"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Later"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_marginBottom="15dp"/>
+
+
+        </LinearLayout>
+    
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

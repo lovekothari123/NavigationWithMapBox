@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/share_back"
+        android:alpha="0.7"/>
+
+    <ImageView
+        android:id="@+id/share_my_app_logo"
+        android:foregroundGravity="center_vertical|center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/splech_scree_updated_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"/>
+
+    <Button
+        android:id="@+id/btn_tell_frnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_back"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:text="SHARE APP"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+</RelativeLayout>

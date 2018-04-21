@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <ImageView
+        android:id="@+id/category_listing_view_image"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/drawer_logo"
+        />
+    <TextView
+        android:id="@+id/category_listing_view_text"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="SmartStop"
+        android:layout_toRightOf="@+id/category_listing_view_image"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/category_listing_view_text_two"
+        android:layout_below="@+id/category_listing_view_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="SmartStop"
+        android:layout_toRightOf="@+id/category_listing_view_image"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/ctegory_listing_get_direction"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/category_listing_view_text_two"
+        android:layout_centerInParent="true"
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:text="GET DIRECTION"
+        android:textStyle="normal"
+        android:textSize="15dp"
+        android:visibility="visible"
+        android:background="@drawable/getdirection_butinon"
+        android:textColor="@color/white"
+
+        />
+
+
+    <View
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ctegory_listing_get_direction"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+</RelativeLayout>
